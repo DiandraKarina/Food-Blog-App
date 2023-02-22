@@ -1,0 +1,45 @@
+*{
+    top:0;
+    margin:0;
+}
+.banner{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('src/assets/images/brunch.jpg');
+    background-size:cover;
+    background-position: center;
+    padding-top: 10rem;
+  }
+  h4{
+    font-size: 4rem;
+    padding-top:0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f9f5f8;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-family: "Lobster", cursive;
+  
+  }
+  .post {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom:5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  
+  }
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,0 +1,31 @@
+<app-navbar2></app-navbar2>
+<div class="container"
+  *ngIf="blogpost?.blogPostId">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="card shadow-effect">
+        <img [src]="blogpost.image" />
+        <!--{{blogpost?.data?.image}}"> -->
+        <div class="card-body">
+          <small class="bg-light text-danger text-center"></small>
+          <small class="bg-light text-warning text-center"></small>
+          <div class="details">
+            <div class="details1">
+              <h1 class="mt-3 mb-3">
+                {{blogpost?.postName}}
+              </h1>
+              <div class = "rating">
+                <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+              </div>
+              <p>{{blogpost?.description}}</p>
+            </div>
+          </div>
+        </div>
+        <app-comment-card [blogPostId]="blogpost?.blogPostId"></app-comment-card>
+
+      </div>
+      <app-comment-list [blogpostId]="blogpost?.blogPostId"></app-comment-list>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

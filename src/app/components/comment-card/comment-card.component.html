@@ -1,0 +1,14 @@
+<div class="card mt-5 shadow-effect">
+    <div class="card-body">
+        <h4>Leave a comment</h4>
+
+        <form #commentForm="ngForm">
+            <div class="form-group">
+                <label for="">Comment</label>
+                <textarea cols="30" rows="10" class="form-control" placeholder="add your comment" [(ngModel)]="comment" [ngModelOptions]="{standalone: true}"></textarea>
+            <button mat-raised-button (click)="AddComment()">Add Comment</button>
+               <!--<app-button text="Add Comment" color="#e8bada"></app-button> --> 
+            </div>
+        </form>
+    </div>
+</div>

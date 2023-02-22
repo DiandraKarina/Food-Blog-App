@@ -1,0 +1,27 @@
+<div class="post">
+<div class="post-box" *ngFor="let post of blogposts">
+    <img src="{{post.image}}" alt="" class="post-img">
+    <h2 class="category"></h2>
+    <a class="post-title" (click)="viewBlogPost"> <!--(click)="viewBlogPost(user.id)" -->
+        {{post.postName}}
+    </a>
+    <div class="details">
+    <span class="post-date"></span>
+    <div class = "rating">
+        <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+      </div>
+    </div>
+    <p class="post-description"> {{post.description}}</p>
+    <div class="profile" >
+        <span routerLink="/profile" class="profile-name" ></span>
+        <div class="view-button">
+            <button mat-raised-button (click)="viewBlogPost(post.blogPostId)">View</button>
+            <button mat-raised-button (click)="DeleteBlogPost(post.blogPostId)">Delete</button>
+           <!-- <app-button color="pink" text="View" (btnClick)="viewBlogPost(post.blogPostId)"></app-button>
+            <app-button color="pink" text="Delete"></app-button> -->
+          </div>
+    </div>
+</div>
+</div>
+
+

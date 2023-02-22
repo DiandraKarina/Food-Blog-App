@@ -1,0 +1,6 @@
+.account-login{
+    background-color: #575c65;
+    display:flex; 
+    justify-content: flex-end;;
+    height:8vh;
+}

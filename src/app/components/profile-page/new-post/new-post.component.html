@@ -1,0 +1,79 @@
+<app-navbar2></app-navbar2>
+<div class="d-flex justify-content-center signBody align-middle">
+  <div class="card loginCard">
+    <header class="card-header">
+      <h4 class="card-title mt-2 text-center">Create a new recipe post</h4>
+    </header>
+    <article class="card-body">
+      <form
+        [formGroup]="addBlogForm"
+        #postForm="ngForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="blogpost.postName"
+            class="form-control editTitle"
+            placeholder="Give your recipe a title"
+            formControlName="Title"
+            name="title"
+          />
+          <span *ngIf="!Title.valid && Title.touched" class="error-block">
+            Please provide a Title
+          </span>
+        </div>
+       <!-- <div class="form-group">
+          <input
+            type="text"
+           [(ngModel)]="category.name"
+            class="form-control editTitle"
+            placeholder="Give your recipe a category"
+            formControlName="Category"
+          />
+          <span *ngIf="!Category.valid && Category.touched" class="error-block">
+            Please provide a Category
+          </span>
+        </div>
+        -->
+        <div class="form-group">
+          <textarea
+            class="form-control editBody"
+            [(ngModel)]="blogpost.description"
+            placeholder="Write your blog"
+            formControlName="Description"
+            name="description"
+          ></textarea>
+          <span
+            *ngIf="!Description.valid && Description.touched"
+            class="error-block"
+          >
+            Please provide a Description
+          </span>
+        </div>
+        <div class="form-group">
+          <label class="font-weight-bold">Blog Banner</label>
+          <input
+            type="file"
+            [(ngModel)]="blogpost.image"
+            (change)="onFileSelect($event)"
+            class="form-control-file"
+            id="exampleFormControlFile1"
+            formControlName="image"
+          />
+          <img class="imageUpload" [src]="imageUrl" />
+        </div>
+        <div class="form-group">
+          <button class= "mat-raised-button" type="submit" onclick="onSubmit()">Submit</button>
+          //<app-button text="Save Post" color="#b978aa" (btnClick)="onSubmit()"></app-button>
+        </div>
+        <div class="form-group">
+          <button type="reset" class="btn btn-secondary btn-block">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </article>
+  </div>
+</div>
+<app-footer></app-footer>

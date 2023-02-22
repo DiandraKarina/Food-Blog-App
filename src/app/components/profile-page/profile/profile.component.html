@@ -1,0 +1,28 @@
+
+<app-navbar2></app-navbar2>
+
+<div class="wrapper">
+  <div class="testimonial">
+      <h1>{{profile?.userPrincipalName}} </h1>
+  </div>
+  <mat-card-content>
+    <img [src]="profilePic" height="250px" width="250px">
+  </mat-card-content>
+</div>
+
+<!--<div *ngFor="let post of posts" class="card-body row">
+  <app-blog-card  [post]="post"></app-blog-card>
+</div> 
+
+<section *ngFor="let blogpost of blogposts" class="recipe-container">
+<app-recipe-box></app-recipe-box>
+</section>
+-->
+
+    <app-post-box></app-post-box>
+
+
+<div class="create-post-button" *ngIf="isUserLoggedIn">
+<a routerLink="/newpost"> <app-button color="pink" text="Add New Post" (btnClick)="createBlog()"></app-button></a>
+</div>
+<app-footer></app-footer>

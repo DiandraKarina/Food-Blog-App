@@ -1,0 +1,17 @@
+*{
+    max-width: 200vh;
+}
+
+.container{
+    font-family: 'Poppins';
+    padding-top:20vh;
+}
+
+.side-post{
+    margin-bottom: 20px;
+}
+
+.details{
+    display:flex;
+    justify-content: space-between;
+}

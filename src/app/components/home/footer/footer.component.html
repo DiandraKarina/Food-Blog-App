@@ -1,0 +1,28 @@
+<footer>
+  <div class="footer">
+  <div class="col-1">
+    <a routerLink="/about">About</a>
+    <a routerLink="/blogs">Blogs</a>
+    <a routerLink="/contact">Contact</a>
+  </div>
+  <div class="col-2">
+    <h3>NEWSLETTER</h3>
+    <mat-form-field appearence="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="you@youremail.com" />
+    </mat-form-field>
+    <br>
+    <app-button
+      color="#b978aa"
+      text="Subscribe Now"
+      (btnClick)="subscribeToBlog()"
+    ></app-button>
+  </div>
+  <div class="col-3">
+      <app-social color="#ffff"></app-social>
+  </div>
+</div>
+  <div class="footer-bottom">
+    <p>copyright &copy;2023 Food For Soul. designed by <span> Diandra </span></p>
+</div>
+</footer>

@@ -1,0 +1,11 @@
+.logo{
+    color: #d7dce7;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+h4{
+    font-size: 2rem;
+    padding-top:2rem;
+}
